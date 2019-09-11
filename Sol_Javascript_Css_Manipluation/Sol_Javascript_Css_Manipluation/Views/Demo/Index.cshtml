@@ -1,0 +1,43 @@
+﻿@model Sol_Javascript_Css_Manipluation.Models.DemoModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    div.stylered{
+        background-color:red;
+    }
+
+    div.stylegreen{
+        background-color:green;
+    }
+</style>
+
+
+<h1>Index</h1>
+
+<div class="@Model.CssClassCall">
+    Kishor Naik
+</div>
+
+
+@section Scripts{
+
+    <script>
+
+        @Model.JavascriptFuncCall
+
+        @Model.JavascriptFuncParaCall
+
+        function funcCall() {
+            console.log("Function call from Controller action");
+        }
+
+        function funcParaCall(intValue) {
+            console.log(intValue);
+        }
+
+    </script>
+
+
+ }
